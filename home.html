@@ -1,0 +1,25 @@
+<div class="panel-group col-md-12 col-sm-12 col-xs-12" ng-repeat="room in Home">
+    <div class="panel panel-primary">
+        <div class="panel-heading">{{room.Name}}</div>
+        <div class="panel-body">
+
+            <div class="container col-md-12 col-sm-12 col-xs-12">
+                <table class="table">
+                    <tbody>
+                        <tr ng-repeat="equipment in room.Equipment" ng-class-odd="'success'">
+                            <td>{{equipment.name}}</td>
+                            <td>
+                                <label class="switch"  ng-show='equipment.controltype=="button"' ><input type="checkbox"><span class="buttonslider"></span></label>
+                                <div  ng-show='equipment.controltype=="regulator"' ><input type="range" min="1" max="100" class="slider" value="50"></div>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

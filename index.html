@@ -1,0 +1,71 @@
+<html ng-app="mainApp">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- jQuery library -->
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+    <!-- Latest compiled and minified CSS -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!-- bootstraps toggle buttons  -->
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="navbar.css">
+    <link rel="stylesheet" type="text/css" href="togglebutton.css">
+    <link rel="stylesheet" type="text/css" href="slider.css">
+    <link rel="stylesheet" type="text/css" href="settings.css">
+
+
+
+    <script type="text/javascript" src="app.js"></script>
+
+
+
+</head>
+
+<body>
+
+    <nav ng-show="loginSuccess" class="navbar navbar-inverse" ng-controller="homeCtrl">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#myhome">{{HomeName}}</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#home"><span class="glyphicon glyphicon-home"></span> Monitor</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a><span class="glyphicon glyphicon-refresh"></span> Refresh</a></li>
+                <li><a href="#settings"><span class="glyphicon glyphicon-user"></span> admin</a></li>
+                <li ng-show="adminloginSucess" ng-click="logout()"><a><span class="glyphicon glyphicon-log-out"></span> logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div ng-view></div>
+
+</body>
+
+</html>

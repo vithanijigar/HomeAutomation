@@ -1,0 +1,13 @@
+sudo cp index.html /var/www/html/
+sudo cp home.html /var/www/html/
+sudo cp login.html /var/www/html/
+sudo cp settings.html /var/www/html/
+sudo cp myhome.html /var/www/html/
+
+
+
+sudo cp app.js /var/www/html/
+sudo cp slider.css  /var/www/html/
+sudo cp togglebutton.css /var/www/html/
+sudo cp navbar.css /var/www/html/
+sudo cp settings.css  /var/www/html/

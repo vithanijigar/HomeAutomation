@@ -1,0 +1,45 @@
+<h1>{{RoomManagement}}</h1>
+
+
+<div class="panel-group col-md-6 col-sm-12 col-xs-12" ng-repeat="room in Home">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title pull-left">{{room.Name}}</div>
+            <div class="panel-title pull-right"><button type="button" class="btn btn-default btn-md"><span class="glyphicon glyphicon-remove"></span> Remove</button></div>
+            <div class="panel-title pull-right"><button type="button" class="btn btn-default btn-md"><span class="glyphicon glyphicon-plus"></span> Add Device</button></div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="panel-body">
+
+            <div class="container col-md-12 col-sm-12 col-xs-12">
+                <table class="table">
+                    <tbody>
+                        <tr ng-repeat="equipment in room.Equipment" ng-class-odd="'success'">
+                            <td>{{equipment.name}}</td>
+                            <td>
+                                <select ng-model="selectedName" ng-options="x for x in controltype"></select>
+                            </td>
+                            <td>
+                                <button type="button" class="btn btn-default btn-sm"><span class="glyphicon glyphicon-remove"></span> Remove</button>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div>
+    <div class="carousel-caption">
+        <div class="vbottom">
+            <button class=" btn btn-primary pull-right">Save</button>
+        </div>
+    </div>
+
+</div>
